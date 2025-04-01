@@ -17,12 +17,12 @@ export default function ContactPage() {
     {
       question: "What is your typical response time?",
       answer:
-        "I typically respond to all inquiries within 24 hours during business days. For urgent matters, please indicate so in your message.",
+        "We typically respond to all inquiries within 24 hours during business days. For urgent matters, please indicate so in your message.",
     },
     {
       question: "Do you work with clients internationally?",
       answer:
-        "Yes, I work with clients from all over the world. Time zone differences are never an issue as I'm flexible with scheduling meetings.",
+        "Yes, We work with clients from all over the world. Time zone differences are never an issue as We are flexible with scheduling meetings.",
     },
     {
       question: "What information should I provide for a quote?",
@@ -32,7 +32,7 @@ export default function ContactPage() {
     {
       question: "How do you handle project revisions?",
       answer:
-        "I include a set number of revisions in each project quote. Additional revisions can be accommodated at an hourly rate.",
+        "We include a set number of revisions in each project quote. Additional revisions can be accommodated at an hourly rate.",
     },
   ]
 

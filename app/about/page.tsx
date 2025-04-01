@@ -15,7 +15,8 @@ import { Linkedin } from "lucide-react";
 
 export default function AboutPage() {
   const skills = [
-    "JavaScript/TypeScript",
+    "JavaScript",
+    "TypeScript",
     "React.js",
     "Next.js",
     "Node.js",
@@ -86,11 +87,11 @@ export default function AboutPage() {
     },
     {
       name: "Anand Behera",
-      role: "Sinior Developer",
+      role: "Senior Developer",
       title: "Java Full Stack Developer",
       image:
         "kk.jpg",
-      linkedin: "https://www.linkedin.com/in/bisworanjan-rout-90b13724b/",
+      linkedin: "https://www.linkedin.com/in/ananda-behera-8b322b253/",
     },
   ];
   return (
@@ -331,7 +332,7 @@ export default function AboutPage() {
               Let's Work Together
             </h2>
             <p className="text-xl opacity-90 font-bold">
-              Interested in collaborating or have a project in mind? I'd love to
+              Interested in collaborating or have a project in mind? We would love to
               hear from you.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4 pt-4">

@@ -7,6 +7,7 @@ import { ArrowRight, Code, Layout, Database, Zap } from "lucide-react";
 import ProjectCard from "@/components/project-card";
 import TestimonialCard from "@/components/testimonial-card";
 import { Typewriter } from "react-simple-typewriter";
+import { motion } from "framer-motion";
 
 export default function Home() {
   const service = [
@@ -130,56 +131,97 @@ export default function Home() {
       </section>
 
       {/* Skills Section */}
-      <section className="py-20 text-black dark:text-foreground bg-muted/50 relative">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Our Expertise</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              We offer a comprehensive range of services to help businesses and
-              individuals establish a strong online presence.
-            </p>
-          </div>
+     
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {service.map((service, index) => (
-              <div key={index} className="relative group">
-                <Card className="border border-sky-500 shadow-xl transition-all duration-300 ease-in-out group-hover:scale-110 group-hover:shadow-none bg-white dark:bg-gray-900 relative overflow-hidden">
-                  {/* Gradient Shadow Effect */}
-                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <div
-                      className="absolute inset-0 blur-2xl rounded-xl 
-              bg-gradient-to-r from-blue-400 via-blue-600 to-black 
-              dark:from-blue-700 dark:via-black dark:to-black 
-              opacity-40 group-hover:opacity-80 transition-opacity duration-300"
-                    ></div>
-                  </div>
+<section className="py-20 text-black dark:text-foreground bg-muted/50 relative">
+  <div className="container mx-auto px-4">
+    <div className="text-center mb-12">
+      <h2 className="text-3xl font-bold mb-4">Our Expertise</h2>
+      <p className="text-muted-foreground max-w-2xl mx-auto">
+        We offer a comprehensive range of services to help businesses and
+        individuals establish a strong online presence.
+      </p>
+    </div>
 
-                  <CardContent className="p-6 space-y-4 relative z-10">
-                    <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center">
-                      {service.icon}
-                    </div>
-                    <h3 className="text-xl font-semibold">{service.title}</h3>
-                    <p className="text-muted-foreground">{service.desc}</p>
-                  </CardContent>
-                </Card>
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      {service.map((service, index) => {
+        // Calculate animation direction based on index
+        const direction = index % 3;
+        let initialX = 0;
+        let initialY = 50; // Default to coming from bottom
+
+        // Alternate directions for mobile
+        if (direction === 0) initialX = -50; // From left
+        if (direction === 1) initialX = 50;  // From right
+        
+        return (
+          <motion.div
+            key={index}
+            className="relative group"
+            initial={{ opacity: 0, x: initialX, y: initialY }}
+            whileInView={{ 
+              opacity: 1, 
+              x: 0, 
+              y: 0,
+              transition: { 
+                type: "spring",
+                stiffness: 100,
+                damping: 20,
+                delay: index * 0.1
+              }
+            }}
+            viewport={{ once: true, margin: "-100px" }}
+          >
+            <Card className="border border-sky-500 shadow-xl transition-all duration-300 ease-in-out group-hover:scale-110 group-hover:shadow-none bg-white dark:bg-gray-900 relative overflow-hidden">
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div
+                  className="absolute inset-0 blur-2xl rounded-xl 
+                  bg-gradient-to-r from-blue-400 via-blue-600 to-black 
+                  dark:from-blue-700 dark:via-black dark:to-black 
+                  opacity-40 group-hover:opacity-80 transition-opacity duration-300"
+                ></div>
               </div>
-            ))}
-          </div>
 
-          <div className="text-center mt-12">
-            <Button
-              variant="outline"
-              className="cursor-pointer rounded-2xl text-primary 
-          hover:bg-blue-700 hover:text-white border-sky-400 hover:border-none "
-              asChild
-            >
-              <Link href="/services">
-                View all services <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
-            </Button>
-          </div>
-        </div>
-      </section>
+              <CardContent className="p-6 space-y-4 relative z-10">
+                <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center">
+                  {service.icon}
+                </div>
+                <h3 className="text-xl font-semibold">{service.title}</h3>
+                <p className="text-muted-foreground">{service.desc}</p>
+              </CardContent>
+            </Card>
+          </motion.div>
+        );
+      })}
+    </div>
+
+    <motion.div
+      className="text-center mt-12"
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ 
+        opacity: 1, 
+        y: 0,
+        transition: { 
+          delay: 0.2,
+          type: "spring",
+          stiffness: 50
+        }
+      }}
+      viewport={{ once: true }}
+    >
+      <Button
+        variant="outline"
+        className="cursor-pointer rounded-2xl text-primary 
+        hover:bg-blue-700 hover:text-white border-sky-400 hover:border-none"
+        asChild
+      >
+        <Link href="/services">
+          View all services <ArrowRight className="ml-2 h-4 w-4" />
+        </Link>
+      </Button>
+    </motion.div>
+  </div>
+</section>
 
       {/* Featured Projects */}
       <section className="py-16">

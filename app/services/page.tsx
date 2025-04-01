@@ -1,7 +1,6 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
 import { ArrowRight, Code, Zap, CheckCircle, Server, Globe, Smartphone, Palette } from "lucide-react"
 
 export default function ServicesPage() {
@@ -113,9 +112,9 @@ export default function ServicesPage() {
   <span className="text-primary"> Web Development</span>,  
   <span className="text-primary"> API Development</span>,  
   <span className="text-primary"> Full-Stack Solutions</span>,  
-  <span className="text-primary"> WordPress Customization</span>
-  <span className="text-primary"> and</span>  
-  <span className="text-primary"> Maintenance & Support</span>.
+  <span className="text-primary"> WordPress Customization</span>,
+  {/* <span className="text-primary"> and</span>   */}
+  <span className="text-primary"> Maintenance and Support</span>.
 </p>
 
             <div className="flex flex-col sm:flex-row justify-center gap-4 pt-4">
@@ -212,9 +211,9 @@ export default function ServicesPage() {
       <section className="py-16 bg-muted/50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">My Development Process</h2>
+            <h2 className="text-3xl font-bold mb-4">Our Development Process</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              I follow a structured approach to ensure every project is delivered on time and exceeds expectations.
+              We follow a structured approach to ensure every project is delivered on time and exceeds expectations.
             </p>
           </div>
 
@@ -268,7 +267,7 @@ export default function ServicesPage() {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">Frequently Asked Questions</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Answers to common questions about my services and process.
+              Answers to common questions about our services and process.
             </p>
           </div>
 
@@ -278,7 +277,7 @@ export default function ServicesPage() {
                 <h3 className="text-xl font-semibold  group-hover:text-primary transition-colors duration-300">How long does a typical project take?</h3>
                 <p className="text-muted-foreground">
                   Project timelines vary based on complexity and scope. A simple website might take 2-4 weeks, while a
-                  complex web application could take 2-3 months. I'll provide a detailed timeline during the planning
+                  complex web application could take 2-3 months. We'll provide a detailed timeline during the planning
                   phase.
                 </p>
               </CardContent>
@@ -288,8 +287,8 @@ export default function ServicesPage() {
               <CardContent className="p-6">
               <h3 className="text-xl font-semibold  group-hover:text-primary transition-colors duration-300">What is your payment structure?</h3>
                 <p className="text-muted-foreground">
-                  I typically require a 50% deposit to begin work, with the remaining 50% due upon project completion.
-                  For larger projects, I offer milestone-based payment schedules.
+                  We typically require a 50% deposit to begin work, with the remaining 50% due upon project completion.
+                  For larger projects, we offer milestone-based payment schedules.
                 </p>
               </CardContent>
             </Card>
@@ -298,7 +297,7 @@ export default function ServicesPage() {
               <CardContent className="p-6">
               <h3 className="text-xl font-semibold  group-hover:text-primary transition-colors duration-300">Do you provide ongoing support?</h3>
                 <p className="text-muted-foreground">
-                  Yes, I offer maintenance and support packages to keep your website running smoothly. This includes
+                  Yes, we offer maintenance and support packages to keep your website running smoothly. This includes
                   regular updates, security monitoring, and content updates.
                 </p>
               </CardContent>
@@ -308,7 +307,7 @@ export default function ServicesPage() {
               <CardContent className="p-6">
               <h3 className="text-xl font-semibold  group-hover:text-primary transition-colors duration-300">What technologies do you work with?</h3>
                 <p className="text-muted-foreground">
-                  I specialize in modern web technologies including React, Next.js, Node.js, and various databases. I
+                  We specialize in modern web technologies including React, Next.js, Node.js, and various databases both SQL and NoSQL. We
                   choose the best technology stack based on your specific project requirements.
                 </p>
               </CardContent>
