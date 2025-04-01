@@ -44,7 +44,7 @@ export default function Home() {
             playsInline
             className="w-full h-full object-cover"
           >
-            <source src="/videohome.mp4" type="video/mp4" />
+            <source src="https://res.cloudinary.com/dpbffql9d/video/upload/v1743505228/video-1-1_bg3tqu.mp4" type="video/mp4" />
             {/* Fallback image if video doesn't load */}
             {/* <img
               src="https://videocdn.cdnpk.net/videos/66b663a2-f41f-52ba-aee5-1d356f6ddb3f/horizontal/thumbnails/small.jpg"

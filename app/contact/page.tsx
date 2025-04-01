@@ -100,7 +100,7 @@ export default function ContactPage() {
 
       if (!response.ok) {
         if (response.status === 400) {
-          throw new Error(data.message || 'Validation error. Please check your inputs.')
+          throw new Error(data.message || 'Validation error Please check your inputs.')
         } else if (response.status === 500) {
           throw new Error('Server error. Please try again later.')
         } else {
@@ -123,7 +123,7 @@ export default function ContactPage() {
       console.error('Error submitting form:', error)
       toast({
         title: "Error",
-        description: error instanceof Error ? error.message : "There was an error sending your message. Please try again later.",
+        description: error instanceof Error ? error.message : "There was an error so sending your message. Please try again later.",
         variant: "destructive",
       })
     } finally {
