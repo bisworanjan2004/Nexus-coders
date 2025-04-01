@@ -7,9 +7,10 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter, Instagram } from "lucide-react"
-import { useToast } from "@/hooks/use-toast"
 import { motion } from "framer-motion"
 import { ChevronDown } from "lucide-react"
+import { toast, ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 export default function ContactPage() {
   const faqs = [
@@ -35,7 +36,7 @@ export default function ContactPage() {
     },
   ]
 
-  const { toast } = useToast()
+  
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -45,6 +46,7 @@ export default function ContactPage() {
 
   const [openIndex, setOpenIndex] = useState<number | null>(null)
   const [isSubmitting, setIsSubmitting] = useState(false)
+
 
   const toggleFAQ = (index: number) => {
     setOpenIndex(openIndex === index ? null : index)
@@ -60,20 +62,12 @@ export default function ContactPage() {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
     if (!name || !email || !subject || !message) {
-      toast({
-        title: "Missing fields",
-        description: "Please fill in all required fields",
-        variant: "destructive",
-      })
+      toast.error("Please fill in all required fields")
       return false
     }
 
     if (!emailRegex.test(email)) {
-      toast({
-        title: "Invalid email",
-        description: "Please enter a valid email address",
-        variant: "destructive",
-      })
+      toast.error("Please enter a valid email address")
       return false
     }
 
@@ -97,19 +91,16 @@ export default function ContactPage() {
       const data = await response.json()
 
       if (!response.ok) {
+        let errorMessage = 'Failed to send message'
         if (response.status === 400) {
-          throw new Error(data.message || 'Validation error Please check your inputs.')
+          errorMessage = data.message || 'Validation error. Please check your inputs.'
         } else if (response.status === 500) {
-          throw new Error('Server error. Please try again later.')
-        } else {
-          throw new Error(data.message || 'Failed to send message')
+          errorMessage = 'Server error. Please try again later.'
         }
+        throw new Error(errorMessage)
       }
 
-      toast({
-        title: "Message sent!",
-        description: data.message || "Thank you for your message. I'll get back to you soon.",
-      })
+      toast.success(data.message || "Thank you for your message. I'll get back to you soon!")
       
       setFormData({
         name: "",
@@ -119,11 +110,7 @@ export default function ContactPage() {
       })
     } catch (error) {
       console.error('Error submitting form:', error)
-      toast({
-        title: "Error",
-        description: error instanceof Error ? error.message : "There was an error so sending your message. Please try again later.",
-        variant: "destructive",
-      })
+      toast.error(error instanceof Error ? error.message : "There was an error sending your message. Please try again later.")
     } finally {
       setIsSubmitting(false)
     }
@@ -131,6 +118,19 @@ export default function ContactPage() {
 
   return (
     <div className="flex flex-col min-h-screen">
+
+<ToastContainer
+        position="bottom-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
       {/* Hero Section */}
       <section className="relative py-16 md:py-20 bg-muted/50">
         <div
