@@ -16,7 +16,7 @@ export default function PortfolioPage() {
       description:"Siksya Guru is an innovative platform designed to assist students in navigating the complex landscape of higher education choices.",
       image:"sikshyaGuru.png",
       tags: ["React.js", "Tailwind CSS", "Node", "MongoDB"],
-      category: "web-app",
+      category: "Website",
       featured: true,
     },
     {
@@ -29,7 +29,7 @@ export default function PortfolioPage() {
       image:
         "billing.png",
       tags: ["Next.js", "Node.js", "Express", "MongoDB"],
-      category: "web-app",
+      category: "Website",
       featured: true,
     },
     {
@@ -72,7 +72,7 @@ export default function PortfolioPage() {
             </h1>
             <p className="text-xl text-muted-foreground">
               Discover a diverse range of projects showcasing our expertise in
-              web and API development, AI solutions, and automation. Each
+              web and API development, AI solutions and automation. Each
               project reflects our commitment to innovation, quality, and
               scalability across various industries.
             </p>
@@ -84,7 +84,7 @@ export default function PortfolioPage() {
       <section className="py-8">
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap justify-center gap-2 mb-8">
-            {["all", "web-app", "dashboard"].map((category) => (
+            {["all", "Website", "dashboard"].map((category) => (
               <Button
                 key={category}
                 variant={selectedCategory === category ? "default" : "ghost"}

@@ -11,8 +11,13 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Nexus Coders",
-  description:
-    "Professional portfolio of Nexus Coders, a full stack web solutions team specializing in modern web applications.",
+  description: "Professional portfolio of Nexus Coders, a full stack web solutions team specializing in modern web applications.",
+  icons: {
+    icon: "/favicon.ico",
+    // You can add more icons here if you have them
+    shortcut: "/fav.png",
+    // apple: "/N.png",
+  },
 };
 
 export default function RootLayout({
@@ -25,7 +30,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <ThemeProvider 
           attribute="class" 
-          defaultTheme="dark"  // This sets dark mode as default
+          defaultTheme="dark"
           enableSystem 
           disableTransitionOnChange
         >
@@ -40,7 +45,7 @@ export default function RootLayout({
               rel="noopener noreferrer"
               className="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-all duration-300 flex items-center justify-center"
             >
-              <FaWhatsapp className="h-10 w-10" />
+              <FaWhatsapp className="h-8 w-8" />
             </a>
           </div>
         </ThemeProvider>

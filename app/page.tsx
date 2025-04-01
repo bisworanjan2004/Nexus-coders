@@ -7,7 +7,7 @@ import { ArrowRight, Code, Layout, Database, Zap } from "lucide-react";
 import ProjectCard from "@/components/project-card";
 import TestimonialCard from "@/components/testimonial-card";
 import { Typewriter } from "react-simple-typewriter";
-import { motion } from "framer-motion";
+ import { motion } from "framer-motion";
 
 export default function Home() {
   const service = [

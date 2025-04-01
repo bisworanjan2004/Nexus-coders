@@ -21,6 +21,7 @@ export default function AboutPage() {
     "Next.js",
     "Node.js",
     "Express",
+    "Shadcn",
     "MongoDB",
     "PostgreSQL",
     "GraphQL",
@@ -30,8 +31,14 @@ export default function AboutPage() {
     "UI/UX Design",
     "Git/GitHub",
     "Docker",
+    "AI/ML",
     "AWS",
     "Firebase",
+    "Agile/Scrum",
+    "Responsive Design",
+    "Wardpress",
+    "Figma",
+    "Material UI",
   ];
 
   const cardVariants = {
@@ -73,7 +80,7 @@ export default function AboutPage() {
     {
       name: "Bisworanjan Rout",
       role: "UI/UX Lead",
-      title: "Frontend Developer , Wordpress ",
+      title: "Frontend Developer & Wordpress ",
       image: "me.jpg",  
       linkedin: "https://www.linkedin.com/in/bisworanjan-rout-90b13724b/",
     },
@@ -86,7 +93,7 @@ export default function AboutPage() {
       linkedin: "https://www.linkedin.com/in/ramashis-kalyan-das-a95086276/",
     },
     {
-      name: "Anand Behera",
+      name: "Ananda Behera",
       role: "Senior Developer",
       title: "Java Full Stack Developer",
       image:
@@ -130,21 +137,21 @@ export default function AboutPage() {
                 </h1>
               </div>
               <p className="text-xl text-muted-foreground">
-                A team of passionate full-stack developers, designers, and
+                A team of passionate full-stack developers, designers and
                 problem solvers, dedicated to crafting modern web applications
                 and seamless digital experiences.
               </p>
 
               <p className="text-muted-foreground">
                 We specialize in building high-performance websites, custom web
-                applications, and scalable solutions using the latest
+                applications and scalable solutions using the latest
                 technologies. Our expertise spans across frontend and backend
-                development, UI/UX design, and cloud deployment.
+                development, UI/UX design and cloud deployment.
               </p>
 
               <p className="text-muted-foreground">
                 Whether you're a startup looking for an MVP, a business seeking
-                digital transformation, or an individual with a creative idea,
+                digital transformation or an individual with a creative idea,
                 we're here to turn your vision into reality.
               </p>
 
