@@ -108,7 +108,7 @@ export default function AboutPage() {
 
                 <div className="absolute inset-2 rounded-2xl overflow-hidden transition-all duration-500 group-hover:scale-[1.02]">
                   <Image
-                    src="image4.png"
+                    src="https://res.cloudinary.com/dpbffql9d/image/upload/v1743506337/image4_boryxb.png"
                     alt="Profile Picture"
                     width={1000}
                     height={1000}

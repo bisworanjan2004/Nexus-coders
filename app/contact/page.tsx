@@ -6,8 +6,6 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Badge } from "@/components/ui/badge"
 import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter, Instagram } from "lucide-react"
 import { useToast } from "@/hooks/use-toast"
 import { motion } from "framer-motion"
@@ -137,7 +135,7 @@ export default function ContactPage() {
       <section className="relative py-16 md:py-20 bg-muted/50">
         <div
           className="absolute inset-1 bg-cover bg-center opacity-90 dark:opacity-65"
-          style={{ backgroundImage: "url('https://media.istockphoto.com/id/1313742092/photo/business-partnership-business-man-investor-handshake-with-effect-global-network-link.jpg?s=2048x2048&w=is&k=20&c=MnKtzuNqdjLM9xUXBxsEEPg7-kU9glJ0xpSYAGPYvcQ=')" }}
+          style={{ backgroundImage: "url('https://res.cloudinary.com/dpbffql9d/image/upload/v1743507024/istockphoto-1313742092-2048x2048_ddmzjr.jpg)" }}
         />
         <div className="absolute inset-0 bg-black/30 dark:bg-black/60" />
 
