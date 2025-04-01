@@ -135,7 +135,7 @@ export default function ContactPage() {
       <section className="relative py-16 md:py-20 bg-muted/50">
         <div
           className="absolute inset-1 bg-cover bg-center opacity-90 dark:opacity-65"
-          style={{ backgroundImage: "url('https://res.cloudinary.com/dpbffql9d/image/upload/v1743507024/istockphoto-1313742092-2048x2048_ddmzjr.jpg)" }}
+          style={{ backgroundImage: "url('https://res.cloudinary.com/dpbffql9d/image/upload/v1743507024/istockphoto-1313742092-2048x2048_ddmzjr.jpg')" }}
         />
         <div className="absolute inset-0 bg-black/30 dark:bg-black/60" />
 
