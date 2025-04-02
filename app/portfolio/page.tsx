@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import ProjectCard from "@/components/project-card";
+import BackgroundPaths from "@/components/background";
 
 export default function PortfolioPage() {
   const [selectedCategory, setSelectedCategory] = useState("all");
@@ -64,8 +65,9 @@ export default function PortfolioPage() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
-      <section className="py-16 md:py-20 bg-muted/50">
-        <div className="container mx-auto px-4">
+      {/* <section className="py-16 md:py-20 bg-muted/50"> */}
+      <BackgroundPaths/>
+        {/* <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center space-y-6">
             <h1 className="text-4xl md:text-5xl font-bold tracking-tight">
               Our <span className="text-primary">Projects</span>
@@ -77,8 +79,8 @@ export default function PortfolioPage() {
               scalability across various industries.
             </p>
           </div>
-        </div>
-      </section>
+        </div> */}
+      {/* </section> */}
 
       {/* Portfolio Filters */}
       <section className="py-8">

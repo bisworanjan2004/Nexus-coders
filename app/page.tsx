@@ -8,6 +8,10 @@ import ProjectCard from "@/components/project-card";
 import TestimonialCard from "@/components/testimonial-card";
 import { Typewriter } from "react-simple-typewriter";
  import { motion } from "framer-motion";
+import FloatCardDemo from "@/components/floatCard";
+import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card"
+
+ 
 
 export default function Home() {
   const service = [
@@ -38,6 +42,7 @@ export default function Home() {
       <section className="relative py-20 md:py-28 overflow-hidden">
         {/* Video Background */}
         <div className="absolute inset-0 z-0">
+          
           <video
             autoPlay
             loop
@@ -131,6 +136,7 @@ export default function Home() {
       </section>
 
       {/* Skills Section */}
+      
      
 
 <section className="py-20 text-black dark:text-foreground bg-muted/50 relative">
@@ -224,62 +230,159 @@ export default function Home() {
 </section>
 
       {/* Featured Projects */}
-      <section className="py-16">
-        <div className="container mx-auto px-4 ">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Featured Projects</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              A selection of our recent work. Each project represents a unique
-              challenge and solution.
-            </p>
-          </div>
+     {/* Featured Projects */}
+<section className="py-16">
+  <div className="container mx-auto px-4">
+    <div className="text-center mb-12">
+      <h2 className="text-3xl font-bold mb-4">Featured Projects</h2>
+      <p className="text-muted-foreground max-w-2xl mx-auto">
+        A selection of our recent work. Each project represents a unique
+        challenge and solution.
+      </p>
+    </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ">
-            <ProjectCard
-              title="Sikshya Guru"
-              description="Siksya Guru is an innovative platform designed to assist students in navigating the complex landscape of higher education choices."
-              image="sikshyaGuru.png"
-              tags={["React.js", "Tailwind CSS", "Stripe", "MongoDB"]}
-              link="/portfolio/ecommerce-platform"
-              className="border border-sky-500 shadow-xl transition-all duration-300 ease-in-out group-hover:scale-110 group-hover:shadow-none bg-white  dark:bg-gray-900 relative overflow-hidden"
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {/* Sikshya Guru Project */}
+      <CardContainer className="inter-var">
+        <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl p-6 border">
+          <CardItem translateZ="50" className="text-xl font-bold text-neutral-600 dark:text-white">
+            Sikshya Guru
+          </CardItem>
+          <CardItem as="p" translateZ="60" className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300">
+            Siksya Guru is an innovative platform designed to assist students in navigating the complex landscape of higher education choices.
+          </CardItem>
+          <CardItem translateZ="100" className="w-full mt-4">
+            <Image
+              src="/sikshyaGuru.png"
+              height="1000"
+              width="1000"
+              className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
+              alt="Sikshya Guru"
             />
-            <ProjectCard
-              
-              title= "Billing Software"
-              description=
-                "A comprehensive billing software solution for managing invoices, payments, and customer accounts."
-              
-              
-              image=
-                "billing.png"
-              tags={["Next.js","MUI", "Node.js", "Express", "MongoDB"]}
-              link="/portfolio/fitness-app"
-            />
-            <ProjectCard
-              title= "AI Powered Waste Management System"
-              description=
-                "Our E-Waste Management System is an innovative solution that leverages AI technology to optimize waste collection and disposal processes."
-              image=
-                "e-waste-ai.jpg"
-              tags={["React.js", "Firebase", "Chart.js", "Tailwind CSS"]}
-              link="/portfolio/real-estate-dashboard"
-            />
+          </CardItem>
+          <div className="flex flex-wrap gap-2 mt-4">
+            {["React.js", "Tailwind CSS", "Stripe", "MongoDB"].map((tag) => (
+              <CardItem
+                key={tag}
+                translateZ={20}
+                className="px-2 py-1 rounded-md bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
+              >
+                {tag}
+              </CardItem>
+            ))}
           </div>
-
-          <div className="text-center mt-12   ">
-            <Button
-              variant="outline"
-              className="cursor-pointer rounded-2xl text-primary 
-            hover:bg-blue-700 hover:text-white border-sky-400 hover:border-none "
-              asChild
+          <div className="flex justify-between items-center mt-6">
+            <CardItem
+              translateZ={20}
+              as={Link}
+              href="/portfolio/ecommerce-platform"
+              className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white"
             >
-              <Link href="/portfolio ">
-                View all projects <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
-            </Button>
+              View Project →
+            </CardItem>
           </div>
-        </div>
-      </section>
+        </CardBody>
+      </CardContainer>
+
+      {/* Billing Software Project */}
+      <CardContainer className="inter-var">
+        <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl p-6 border">
+          <CardItem translateZ="50" className="text-xl font-bold text-neutral-600 dark:text-white">
+            Billing Software
+          </CardItem>
+          <CardItem as="p" translateZ="60" className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300">
+            A comprehensive billing software solution for managing invoices, payments, and customer accounts to provide a better  solutions.
+          </CardItem>
+          <CardItem translateZ="100" className="w-full mt-4">
+            <Image
+              src="/billing.png"
+              height="1000"
+              width="1000"
+              className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
+              alt="Billing Software"
+            />
+          </CardItem>
+          <div className="flex flex-wrap gap-2 mt-4">
+            {["Next.js", "MUI", "Node.js", "Express", "MongoDB"].map((tag) => (
+              <CardItem
+                key={tag}
+                translateZ={20}
+                className="px-2 py-1 rounded-md bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
+              >
+                {tag}
+              </CardItem>
+            ))}
+          </div>
+          <div className="flex justify-between items-center mt-6">
+            <CardItem
+              translateZ={20}
+              as={Link}
+              href="/portfolio/fitness-app"
+              className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white"
+            >
+              View Project →
+            </CardItem>
+          </div>
+        </CardBody>
+      </CardContainer>
+
+      {/* AI Waste Management Project */}
+      <CardContainer className="inter-var">
+        <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl p-6 border">
+          <CardItem translateZ="50" className="text-xl font-bold text-neutral-600 dark:text-white">
+            AI Powered Waste Management
+          </CardItem>
+          <CardItem as="p" translateZ="60" className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300">
+            Our E-Waste Management System is an innovative solution that leverages AI technology to optimize waste collection and disposal processes.
+          </CardItem>
+          <CardItem translateZ="100" className="w-full mt-4">
+            <Image
+              src="/e-waste-ai.jpg"
+              height="1000"
+              width="1000"
+              className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
+              alt="AI Waste Management"
+            />
+          </CardItem>
+          <div className="flex flex-wrap gap-2 mt-4">
+            {["React.js", "Firebase", "Chart.js", "Tailwind CSS"].map((tag) => (
+              <CardItem
+                key={tag}
+                translateZ={20}
+                className="px-2 py-1 rounded-md bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
+              >
+                {tag}
+              </CardItem>
+            ))}
+          </div>
+          <div className="flex justify-between items-center mt-6">
+            <CardItem
+              translateZ={20}
+              as={Link}
+              href="/portfolio/real-estate-dashboard"
+              className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white"
+            >
+              View Project →
+            </CardItem>
+          </div>
+        </CardBody>
+      </CardContainer>
+    </div>
+
+    <div className="text-center mt-12">
+      <Button
+        variant="outline"
+        className="cursor-pointer rounded-2xl text-primary 
+        hover:bg-blue-700 hover:text-white border-sky-400 hover:border-none"
+        asChild
+      >
+        <Link href="/portfolio">
+          View all projects <ArrowRight className="ml-2 h-4 w-4" />
+        </Link>
+      </Button>
+    </div>
+  </div>
+</section>
 
       {/* Testimonials */}
       <section className="py-16 bg-muted/50 ">
