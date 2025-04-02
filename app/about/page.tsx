@@ -12,7 +12,7 @@ import {
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { ArrowRight, Download, CheckCircle, ArrowUpRight } from "lucide-react";
 import { Linkedin } from "lucide-react";
-import  Beam  from "@/components/beam";
+
 
 export default function AboutPage() {
   const skills = [
@@ -105,7 +105,81 @@ export default function AboutPage() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
-      <Beam/>
+      <section className="py-16 md:py-10 bg-muted/50">
+      
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+            <div className="flex-1 relative order-2 md:order-1 group">
+              {" "}
+              {/* Added group class */}
+              <div className="relative w-full aspect-square max-w-xl mx-auto">
+                {/* Gradient overlay that appears on hover */}
+                {/* <div className="absolute inset-0 rounded-2xl bg-gradient-to-br  duration-500 z-10" /> */}
+
+                <div className="absolute inset-2 rounded-2xl overflow-hidden transition-all duration-500 group-hover:scale-[1.02]">
+                  <Image
+                    src="https://res.cloudinary.com/dpbffql9d/image/upload/v1743506337/image4_boryxb.png"
+                    alt="Profile Picture"
+                    width={1000}
+                    height={1000}
+                    className="object-cover rounded-2xl w-full h-full transition-transform duration-500 group-hover:scale-105"
+                    priority
+                  />
+                </div>
+
+                {/* Subtle glow effect */}
+                {/* <div className="absolute inset-0 rounded-2xl  shadow-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" /> */}
+              </div>
+            </div>
+
+            <div className="flex-1 space-y-6 order-1 md:order-2">
+              <div className="space-y-2">
+                <h1 className="text-4xl md:text-5xl font-bold tracking-tight">
+                  We are <span className="text-primary">Nexus Coders</span>
+                </h1>
+              </div>
+              <p className="text-xl text-muted-foreground">
+                A team of passionate full-stack developers, designers and
+                problem solvers, dedicated to crafting modern web applications
+                and seamless digital experiences.
+              </p>
+
+              <p className="text-muted-foreground">
+                We specialize in building high-performance websites, custom web
+                applications and scalable solutions using the latest
+                technologies. Our expertise spans across frontend and backend
+                development, UI/UX design and cloud deployment.
+              </p>
+
+              <p className="text-muted-foreground">
+                Whether you're a startup looking for an MVP, a business seeking
+                digital transformation or an individual with a creative idea,
+                we're here to turn your vision into reality.
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-4 pt-4">
+                <Button
+                  variant="outline"
+                  className="cursor-pointer rounded-2xl text-primary 
+            hover:bg-blue-700 hover:text-white border-sky-400 hover:border-none transition-colors duration-300"
+                  asChild
+                >
+                  <Link href="/contact">
+                    Contact Us <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
+                </Button>
+                <Button
+                  variant="outline"
+                  className="cursor-pointer rounded-2xl text-primary 
+            hover:bg-blue-700 hover:text-white border-sky-400 hover:border-none transition-colors duration-300"
+                >
+                  <Download className="mr-2 h-4 w-4" /> Download Portfolio
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       {/* Enhanced Team Section */}
       {/* Enhanced Team Section */}
       <section className="py-16 bg-muted/50 dark:bg-background/80">
