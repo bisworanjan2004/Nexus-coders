@@ -37,7 +37,7 @@ export default function AboutPage() {
     "Firebase",
     "Agile/Scrum",
     "Responsive Design",
-    "Wardpress",
+    "Wordpress",
     "Figma",
     "Material UI",
   ];
