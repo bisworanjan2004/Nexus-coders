@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="space-y-4">
             <h3 className="text-2xl font-bold">
-              Nexux<span className="text-primary">Coders</span>
+              Nexus<span className="text-primary">Coders</span>
             </h3>
             <p className="text-muted-foreground">
               Building exceptional digital experiences with modern web technologies.

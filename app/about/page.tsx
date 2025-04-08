@@ -42,32 +42,7 @@ export default function AboutPage() {
     "Material UI",
   ];
 
-  const cardVariants = {
-    initial: { scale: 1, rotate: 0 },
-    hover: { scale: 1.02, rotate: -0.5 },
-  };
-
-  const imageVariants = {
-    initial: { scale: 1, y: 0 },
-    hover: { scale: 1.05, y: -5 },
-  };
-
-  const buttonVariants = {
-    initial: {
-      backgroundColor: "#ffffff",
-      color: "#2563eb",
-      x: 0,
-    },
-    hover: {
-      backgroundColor: "#2563eb",
-      color: "#ffffff",
-      x: 5,
-      transition: {
-        duration: 0.3,
-        bounce: 0.4,
-      },
-    },
-  };
+ 
 
   const teamMembers = [
     {
