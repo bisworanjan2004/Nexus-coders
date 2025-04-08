@@ -119,7 +119,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-border mt-8 pt-8 text-center text-muted-foreground">
-          <p>© {new Date().getFullYear()} Nexux Coders All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Nexus Coders All rights reserved.</p>
         </div>
       </div>
     </footer>
